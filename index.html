@@ -2,17 +2,26 @@
 <html>
 
 <head>
+    <!-- Title of the webpage -->
     <title>Mahboob ul Hasan - Web Developer</title>
+    
+    <!-- Character encoding for proper text rendering -->
     <meta charset="UTF-8">
+    
+    <!-- Viewport settings for responsive design on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Link to W3.CSS for styling -->
+    
+    <!-- Link to W3.CSS stylesheet for basic styling -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <!-- Link to Google Fonts for Roboto font -->
+    
+    <!-- Link to Google Fonts for using the Roboto font -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-    <!-- Link to Font Awesome for icons -->
+    
+    <!-- Link to Font Awesome for using icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <style>
-        /* Styling for the font family of the page */
+        /* General reset for margin and padding to ensure consistent styling */
         html,
         body,
         h1,
@@ -21,252 +30,306 @@
         h4,
         h5,
         h6 {
-            font-family: "Roboto", sans-serif;
+            font-family: "Roboto", sans-serif; /* Font used across the site */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
         }
 
-        /* Styling for profile container */
-        .profile-container {
-            text-align: center;
-            padding: 20px;
+        /* Header styling with gradient background, shadow, and flexible layout */
+        .header {
+            background: linear-gradient(to right, #007BFF, #00BFFF); /* Gradient background from blue to light blue */
+            color: white; /* White text color */
+            padding: 20px; /* Padding around content */
+            display: flex; /* Flexbox layout for alignment */
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Space between text and image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
         }
 
-        /* Styling for profile image */
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid #007BFF;
-            object-fit: cover;
+        /* Content area within the header for the text */
+        .header-content {
+            max-width: 600px; /* Maximum width of text area */
+            flex: 1; /* Flex item takes up available space */
+            padding-right: 20px; /* Space between text and profile image */
         }
 
-        /* Styling for the 'Contact Me' button */
-        .hire-me-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            margin-top: 10px;
+        /* Header title styling */
+        .header-content h1 {
+            margin: 0; /* Remove default margin */
+            font-size: 2.5em; /* Larger font size for prominence */
         }
 
-        /* Styling for 'Contact Me' button on hover */
-        .hire-me-btn:hover {
-            background-color: #0056b3;
+        /* Paragraph styling within the header */
+        .header-content p {
+            margin: 5px 0; /* Margin around paragraphs */
+        }
+
+        /* Styling for the profile image */
+        .header img {
+            width: 200px; /* Set width of image */
+            height: 200px; /* Set height of image */
+            object-fit: cover; /* Ensure image covers area without distortion */
+            border-radius: 50%; /* Circular image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect around image */
+        }
+
+        /* Button styling */
+        .button {
+            display: inline-block; /* Button displayed as an inline block */
+            padding: 12px 24px; /* Padding inside button */
+            background-color: #FF5722; /* Vibrant orange background */
+            color: white; /* White text color */
+            text-decoration: none; /* Remove underline from links */
+            font-size: 16px; /* Font size of button text */
+            font-weight: bold; /* Bold text */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+            margin-top: 10px; /* Space above the button */
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            background-color: #E64A19; /* Darker orange on hover */
+            transform: scale(1.05); /* Slightly enlarge button */
+        }
+
+        /* Main content area styling */
+        .main-content {
+            max-width: 1200px; /* Maximum width for content */
+            margin: 20px auto; /* Center content horizontally with margin */
+            padding: 20px; /* Padding inside content area */
+        }
+
+        /* Section styling to add space between sections */
+        .section {
+            margin-bottom: 40px; /* Space below each section */
+        }
+
+        /* Section heading styling with background color and padding */
+        .section h2 {
+            background-color: #007BFF; /* Blue background */
+            color: white; /* White text color */
+            padding: 10px; /* Padding around heading */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        /* Card styling for individual items within sections */
+        .section .card {
+            background-color: white; /* White background */
+            border: 1px solid #ddd; /* Light gray border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 15px; /* Padding inside card */
+            margin-bottom: 20px; /* Space below each card */
+        }
+
+        /* Paragraph styling within cards */
+        .section .card p {
+            margin: 0 0 10px; /* Margin around paragraphs */
+        }
+
+        /* Footer styling with background color and text alignment */
+        .footer {
+            background-color: #007BFF; /* Blue background */
+            color: white; /* White text color */
+            text-align: center; /* Centered text */
+            padding: 20px; /* Padding around footer content */
+        }
+
+        /* Footer link styling */
+        .footer a {
+            color: white; /* White text color for links */
+            margin: 0 10px; /* Space between social media icons */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        /* Footer link hover effect */
+        .footer a:hover {
+            opacity: 0.8; /* Slightly reduce opacity on hover */
         }
     </style>
 </head>
 
 <body class="w3-light-grey">
-    <!-- Spacing at the top of the page -->
-    <div class="w3-margin-top" style="width: 100%; height: 2vw;"></div>
 
-    <!-- Page Container -->
-    <div class="w3-content w3-margin-top" style="max-width: 1300px;">
+    <!-- Header Section -->
+    <header class="header">
+        <!-- Header content area with personal information and contact button -->
+        <div class="header-content">
+            <h1>Mahboob ul Hasan</h1> <!-- Main name heading -->
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right"></i>Web Developer & Designer</p> <!-- Job title with icon -->
+            <p><i class="fa fa-home fa-fw w3-margin-right"></i>Pakistan</p> <!-- Location with icon -->
+            <p><i class="fa fa-envelope fa-fw w3-margin-right"></i>ulhasan357@gmail.com</p> <!-- Email with icon -->
+            <p><i class="fa fa-phone fa-fw w3-margin-right"></i>+92 328 830 81 21</p> <!-- Phone number with icon -->
+            <a href="mailto:ulhasan357@gmailcom?subject=Hiring%20Request" class="button">Contact Me</a> <!-- Contact button linking to email -->
+        </div>
+        <!-- Profile image -->
+        <img src="https://i.postimg.cc/N0vWc0Q9/Snapchat-659458679.jpg" alt="Profile Image">
+    </header>
 
-        <!-- Profile Section -->
-        <div class="profile-container w3-card-4 w3-white w3-margin-bottom">
-            <!-- Profile image -->
-            <img src="https://i.postimg.cc/N0vWc0Q9/Snapchat-659458679.jpg" alt="Profile Image" class="profile-img">
-            <!-- Profile name -->
-            <h2>Mahboob ul Hasan</h2>
-            <!-- Profile details with icons -->
-            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Web Developer & Designer</p>
-            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Pakistan</p>
-            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ulhasan357@gmail.com</p>
-            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+92 328 830 81 21</p>
-            <!-- 'Contact Me' button -->
-            <a href="mailto:ulhasan357@gmailcom?subject=Hiring%20Request" class="hire-me-btn">Contact Me</a>
+    <!-- Main Content Section -->
+    <div class="main-content">
+
+        <!-- Skills Section -->
+        <div class="section">
+            <h2>Skills</h2> <!-- Section heading -->
+            <div class="card">
+                <!-- Skill progress bars -->
+                <p>HTML</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:94%">94%</div> <!-- HTML progress bar -->
+                </div>
+                <p>CSS</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:83%">83%</div> <!-- CSS progress bar -->
+                </div>
+                <p>JavaScript</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div> <!-- JavaScript progress bar -->
+                </div>
+                <p>Bootstrap</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">80%</div> <!-- Bootstrap progress bar -->
+                </div>
+                <p>PHP</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">70%</div> <!-- PHP progress bar -->
+                </div>
+                <p>SQL</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:65%">65%</div> <!-- SQL progress bar -->
+                </div>
+                <p>WordPress</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%">85%</div> <!-- WordPress progress bar -->
+                </div>
+                <p>Photoshop</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:60%">60%</div> <!-- Photoshop progress bar -->
+                </div>
+                <p>SEO</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div> <!-- SEO progress bar -->
+                </div>
+            </div>
         </div>
 
-        <!-- The Grid -->
-        <div class="w3-row-padding">
 
-            <!-- Left Column for skills and languages -->
-            <div class="w3-third">
 
-                <div class="w3-white w3-text-grey w3-card-4">
-                    <div class="w3-container">
-                        <!-- Skills section -->
-                        <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-                        <!-- Skill: HTML -->
-                        <p>HTML</p>
-                        <div class="w3-light-grey w3-round-xlarge w3-small">
-                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:94%">94%</div>
-                        </div>
-                        <!-- Skill: CSS -->
-                        <p>CSS</p>
-                        <div class="w3-light-grey w3-round-xlarge w3-small">
-                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:83%">
-                                <div class="w3-center w3-text-white">83%</div>
-                            </div>
-                        </div>
-                        <!-- Skill: JavaScript -->
-                        <p>JavaScript</p>
-                        <div class="w3-light-grey w3-round-xlarge w3-small">
-                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-                        </div>
-                        <!-- Skill: Bootstrap -->
-                        <p>Bootstrap</p>
-                        <div class="w3-light-grey w3-round-xlarge w3-small">
-                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">80%</div>
-                        </div>
-                        <!-- Skill: PHP -->
-                        <p>PHP</p>
-                        <div class="w3-light-grey w3-round-xlarge w3-small">
-                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">70%</div>
-                        </div>
-                        <!-- Skill: SQL -->
-                        <p>SQL</p>
-                        <div class="w3-light-grey w3-round-xlarge w3-small">
-                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:65%">65%</div>
-                        </div>
-                        <!-- Skill: WordPress -->
-                        <p>WordPress</p>
-                        <div class="w3-light-grey w3-round-xlarge w3-small">
-                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-                        </div>
-                        <!-- Skill: MS Office -->
-                        <p>Ms Office</p>
-                        <div class="w3-light-grey w3-round-xlarge w3-small">
-                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">70%</div>
-                        </div>
-                        <!-- Skill: Graphic Design -->
-                        <p>Graphic Design</p>
-                        <div class="w3-light-grey w3-round-xlarge w3-small">
-                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:40%">40%</div>
-                        </div>
-                        <br>
-                        <!-- Languages section -->
-                        <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages that I can speak</b></p>
-                        <!-- Language: English -->
-                        <p>English</p>
-                        <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-round-xlarge w3-teal" style="height:24px;width:75%"></div>
-                        </div>
-                        <!-- Language: Urdu -->
-                        <p>Urdu</p>
-                        <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-round-xlarge w3-teal" style="height:24px;width:95%"></div>
-                        </div>
-                        <!-- Language: Hindi -->
-                        <p>Hindi</p>
-                        <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-round-xlarge w3-teal" style="height:24px;width:75%"></div>
-                        </div>
-                        <br>
-                    </div>
-                </div><br>
-
-                <!-- End Left Column -->
+        <div class="section">
+            <h2>Languages That i can speak.</h2> <!-- Section heading -->
+            <div class="card">
+                <!-- Skill progress bars -->
+                <p>English</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">70%</div> <!-- HTML progress bar -->
+                </div>
+                <p>Urdu</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%">85%</div> <!-- HTML progress bar -->
+                </div>
+                
             </div>
-
-            <!-- Right Column for work experience, projects, and education -->
-            <div class="w3-twothird">
-
-                <!-- Work Experience section -->
-                <div class="w3-container w3-card w3-white w3-margin-bottom">
-                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-                    <div class="w3-container">
-                        <!-- Job: Front End Developer -->
-                        <h5 class="w3-opacity"><b>Front End Developer - Freelance</b></h5>
-                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2022 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-                        <p>Developing responsive and interactive websites using the latest technologies and frameworks.
-                            Passionate about creating visually appealing and user-friendly web experiences.</p>
-                        <hr>
-                    </div>
-                    <div class="w3-container">
-                        <!-- Job: Back-end Developer -->
-                       
-                        <h5 class="w3-opacity"><b>Back-end Developer</b></h5>
-                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2023 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-                        <p>Worked on multiple projects involving front-end and back-end development, ensuring seamless integration and functionality.</p>
-                        <hr>
-                    </div>
-                    <div class="w3-container">
-                        <!-- Job: Graphic Designing -->
-                        <h5 class="w3-opacity"><b>Graphic Designing</b></h5>
-                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2024 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-                        <p>Created visually compelling graphic designs, logos, and edited various types of videos and pictures.</p>
-                    </div>
-                </div>
-
-                <!-- Projects section -->
-                <div class="w3-container w3-card w3-white w3-margin-bottom">
-                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-code fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
-                    <div class="w3-container">
-                        <!-- Project 1: Business Boss -->
-                        <h5 class="w3-opacity"><b>Project 1: Business Boss</b></h5>
-                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2024</h6>
-                        <p>Developed a fully responsive Business Guide website using HTML, CSS, JavaScript, and Bootstrap GSAP to guide individuals from new and old businesses. Added about 1100 businesses to this site.</p>
-                        <hr>
-                    </div>
-                    <div class="w3-container">
-                        <!-- Project 2: E-commerce: Wholeness -->
-                        <h5 class="w3-opacity"><b>Project 2: E-commerce: Wholeness</b></h5>
-                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2024</h6>
-                        <p>Created an e-commerce website with HTML, CSS, JavaScript, GSAP, PHP, and MySQL. It features a shopping website with login and signup functionality and other features.</p>
-                        <hr>
-                    </div>
-                    <div class="w3-container">
-                        <!-- Other Simple Practice Projects -->
-                        <h5 class="w3-opacity"><b>Other Simple Practice Projects:</b></h5>
-                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2022 - Now</h6>
-                        <p>Signup and login projects, SubMart (a website with online services to sell), and different pages. I had made different types of landing pages.</p>
-                        <br>
-                    </div>
-                </div>
-
-                <!-- Education section -->
-                <div class="w3-container w3-card w3-white">
-                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-                    <div class="w3-container">
-                        <!-- Education: Matriculation -->
-                        <h5 class="w3-opacity"><b>Matriculation</b></h5>
-                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2020 to 2022</h6>
-                        <p>Govt High School Colony Road</p>
-                        <hr>
-                    </div>
-                    <div class="w3-container">
-                        <!-- Education: Intermediate -->
-                        <h5 class="w3-opacity"><b>Intermediate</b></h5>
-                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2022 to 2024</h6>
-                        <p>Govt Graduate College</p>
-                        <br>
-                    </div>
-                    <div class="w3-container">
-                        <!-- Education: Web Development and Data Entry -->
-                        <h5 class="w3-opacity"><b>Web Development and Data Entry:</b></h5>
-                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2022 to 2024</h6>
-                        <p>From Hasilpur Direction College and also online.</p>
-                        <br>
-                    </div>
-                </div>
-
+        </div>
+        <!-- Experience Section -->
+        <div class="section">
+            <h2>Experience</h2> <!-- Section heading -->
+            <div class="card">
+                <!-- Work experience entry -->
+                <h5 class="w3-opacity"><b>Front-end Developer</b></h5> <!-- Job title -->
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2022 - <span class="w3-tag w3-teal w3-round">Current</span></h6> <!-- Job duration -->
+                <p>Developing responsive and interactive websites using the latest technologies and frameworks. Passionate about creating visually appealing and user-friendly web experiences.</p> <!-- Job description -->
             </div>
-
-            <!-- End Right Column -->
+            <div class="card">
+                <!-- Work experience entry -->
+                <h5 class="w3-opacity"><b>Back-end Developer</b></h5> <!-- Job title -->
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2023 - <span class="w3-tag w3-teal w3-round">Current</span></h6> <!-- Job duration -->
+                <p>Specialized in server-side scripting, database management, and integrating front-end and back-end functionalities to deliver seamless web applications.</p> <!-- Job description -->
+            </div>
         </div>
 
-        <!-- End Grid -->
+        <!-- Education Section -->
+        <div class="section">
+            <h2>Education</h2> <!-- Section heading -->
+            <div class="card">
+                <!-- Education entry -->
+                <h5 class="w3-opacity"><b>Bachelor's in Computer Science</b></h5> <!-- Degree title -->
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2020 - 2022</h6> <!-- Duration of study -->
+                <p>
+                    Govt High School Colony Road Mailsi.
+                </p>
+                
+                <!-- <p>Completed a comprehensive program covering various aspects of computer science, including programming, algorithms, data structures, and software engineering.</p> Degree description -->
+            </div>
+            <div class="card">
+                <!-- Education entry -->
+                <h5 class="w3-opacity"><b>Intermediate</b></h5> <!-- Degree title -->
+            
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2022 - 2024</h6> <!-- Duration of study -->
+                <p>
+                    Govt Graduate Collage Msilsi.
+                </p>
+            </div>
+            <div class="card">
+                <!-- Education entry -->
+                <h5 class="w3-opacity"><b>Computer Course</b></h5> <!-- Degree title -->
+            
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2024</h6> <!-- Duration of study -->
+                <p>
+                    Direction Collage Hasilpur. Through(Psdf).
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Projects Section -->
+        <div class="section">
+            <h2>Projects</h2> <!-- Section heading -->
+            <div class="card">
+                <!-- Project entry -->
+                <h5 class="w3-opacity"><b>Project 1:Bosiness boss</b></h5>
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2023 - <span class="w3-tag w3-teal w3-round">Ongoing</span></h6> <!-- Project duration -->
+                <!-- <p>Developed an e-commerce platform with features such as product catalog, shopping cart, and payment integration.</p> Project description -->
+                <p>Developed a fully responsive Business Guide website using HTML, CSS, JavaScript, and
+                    Bootstrap gsap
+                    to guide all human being from new and old businessess.
+                    i also added Many businessess about 1100 in this site.</p>
+            </div>
+
+            <div class="card">
+                <!-- Project entry -->
+                <h5 class="w3-opacity"><b>Project 2: E-commerce : Wholeness</b></h5> <!-- Project title -->
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2024 - <span class="w3-tag w3-teal w3-round">Ongoing</span></h6> <!-- Project duration -->
+                <p>Created an e-commerce website html css javascript gsap php and MySQL.
+                    it is a shoping website with the login and signup functionality and other things.
+                </p>
+            </div>
+
+            <div class="card">
+                <!-- Project entry -->
+                <h5 class="w3-opacity"><b>Landing pages</b></h5> <!-- Project title -->
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2022 - <span class="w3-tag w3-teal w3-round">Ongoing</span></h6> <!-- Project duration -->
+                <p>
+
+                    i had created many kind of Landing pages from 2020 to now.
+                    login pages animated pages contect form pages and many kind of more pages.
+                </p>
+            </div>
+        </div>
+
     </div>
 
-    <!-- Footer -->
-    <footer class="w3-container w3-teal w3-center w3-margin-top">
-        <!-- Footer content -->
-        <p>Find me on social media.</p>
-        <!-- Social media icons with links -->
-        <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-        <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-        <a href="https://www.snapchat.com" target="_blank"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
-        <a href="https://www.pinterest.com" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
-        <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
-        <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-        <a href="https://www.github.com" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
-        <a href="https://www.stackoverflow.com" target="_blank"><i class="fa fa-stack-overflow w3-hover-opacity"></i></a>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Footer content with social media links -->
+        <p>Find me on social media.</p> <!-- Footer text -->
+        <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-official"></i></a> <!-- Facebook link -->
+        <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a> <!-- Instagram link -->
+        <a href="https://www.snapchat.com" target="_blank"><i class="fa fa-snapchat"></i></a> <!-- Snapchat link -->
+        <a href="https://www.pinterest.com" target="_blank"><i class="fa fa-pinterest-p"></i></a> <!-- Pinterest link -->
+        <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a> <!-- Twitter link -->
+        <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a> <!-- LinkedIn link -->
+        <a href="https://www.github.com" target="_blank"><i class="fa fa-github"></i></a> <!-- GitHub link -->
+        <a href="https://www.stackoverflow.com" target="_blank"><i class="fa fa-stack-overflow"></i></a> <!-- Stack Overflow link -->
     </footer>
 
 </body>
