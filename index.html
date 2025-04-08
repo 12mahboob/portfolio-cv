@@ -1,341 +1,353 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <!-- Title of the webpage -->
-    <title>Mahboob ul Hasan - Web Developer</title>
-    
-    <!-- Character encoding for proper text rendering -->
     <meta charset="UTF-8">
-    
-    <!-- Viewport settings for responsive design on mobile devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Link to W3.CSS stylesheet for basic styling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahboob ul Hasan - Professional Web Developer</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
-    <!-- Link to Google Fonts for using the Roboto font -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-    
-    <!-- Link to Font Awesome for using icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* General reset for margin and padding to ensure consistent styling */
-        html,
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: "Roboto", sans-serif; /* Font used across the site */
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
         }
-
-        /* Header styling with gradient background, shadow, and flexible layout */
-        .header {
-            background: linear-gradient(to right, #007BFF, #00BFFF); /* Gradient background from blue to light blue */
-            color: white; /* White text color */
-            padding: 20px; /* Padding around content */
-            display: flex; /* Flexbox layout for alignment */
-            align-items: center; /* Center items vertically */
-            justify-content: space-between; /* Space between text and image */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background-color: white;
+            margin: 20px;
         }
-
-        /* Content area within the header for the text */
-        .header-content {
-            max-width: 600px; /* Maximum width of text area */
-            flex: 1; /* Flex item takes up available space */
-            padding-right: 20px; /* Space between text and profile image */
+        
+        .sidebar {
+            flex: 1;
+            min-width: 300px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px;
         }
-
-        /* Header title styling */
-        .header-content h1 {
-            margin: 0; /* Remove default margin */
-            font-size: 2.5em; /* Larger font size for prominence */
-        }
-
-        /* Paragraph styling within the header */
-        .header-content p {
-            margin: 5px 0; /* Margin around paragraphs */
-        }
-
-        /* Styling for the profile image */
-        .header img {
-            width: 200px; /* Set width of image */
-            height: 200px; /* Set height of image */
-            object-fit: cover; /* Ensure image covers area without distortion */
-            border-radius: 50%; /* Circular image */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect around image */
-        }
-
-        /* Button styling */
-        .button {
-            display: inline-block; /* Button displayed as an inline block */
-            padding: 12px 24px; /* Padding inside button */
-            background-color: #FF5722; /* Vibrant orange background */
-            color: white; /* White text color */
-            text-decoration: none; /* Remove underline from links */
-            font-size: 16px; /* Font size of button text */
-            font-weight: bold; /* Bold text */
-            border-radius: 5px; /* Rounded corners */
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
-            margin-top: 10px; /* Space above the button */
-        }
-
-        /* Button hover effect */
-        .button:hover {
-            background-color: #E64A19; /* Darker orange on hover */
-            transform: scale(1.05); /* Slightly enlarge button */
-        }
-
-        /* Main content area styling */
+        
         .main-content {
-            max-width: 1200px; /* Maximum width for content */
-            margin: 20px auto; /* Center content horizontally with margin */
-            padding: 20px; /* Padding inside content area */
+            flex: 2;
+            min-width: 500px;
+            padding: 30px;
         }
-
-        /* Section styling to add space between sections */
-        .section {
-            margin-bottom: 40px; /* Space below each section */
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #3498db;
+            display: block;
+            margin: 0 auto 20px;
         }
-
-        /* Section heading styling with background color and padding */
-        .section h2 {
-            background-color: #007BFF; /* Blue background */
-            color: white; /* White text color */
-            padding: 10px; /* Padding around heading */
-            border-radius: 5px; /* Rounded corners */
+        
+        .section-title {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            font-size: 1.5em;
         }
-
-        /* Card styling for individual items within sections */
-        .section .card {
-            background-color: white; /* White background */
-            border: 1px solid #ddd; /* Light gray border */
-            border-radius: 5px; /* Rounded corners */
-            padding: 15px; /* Padding inside card */
-            margin-bottom: 20px; /* Space below each card */
+        
+        .contact-info {
+            margin: 20px 0;
         }
-
-        /* Paragraph styling within cards */
-        .section .card p {
-            margin: 0 0 10px; /* Margin around paragraphs */
+        
+        .contact-info i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
         }
-
-        /* Footer styling with background color and text alignment */
-        .footer {
-            background-color: #007BFF; /* Blue background */
-            color: white; /* White text color */
-            text-align: center; /* Centered text */
-            padding: 20px; /* Padding around footer content */
+        
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
         }
-
-        /* Footer link styling */
-        .footer a {
-            color: white; /* White text color for links */
-            margin: 0 10px; /* Space between social media icons */
-            text-decoration: none; /* Remove underline from links */
+        
+        .skill-item {
+            margin-bottom: 15px;
         }
-
-        /* Footer link hover effect */
-        .footer a:hover {
-            opacity: 0.8; /* Slightly reduce opacity on hover */
+        
+        .skill-name {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background-color: #34495e;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-level {
+            height: 100%;
+            background-color: #3498db;
+            border-radius: 5px;
+        }
+        
+        .job, .education-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .job:last-child, .education-item:last-child {
+            border-bottom: none;
+        }
+        
+        .job-title, .degree {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #2c3e50;
+        }
+        
+        .company, .institution {
+            font-weight: bold;
+            color: #7f8c8d;
+        }
+        
+        .date {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        .current {
+            background-color: #3498db;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            background-color: #3498db;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+        
+        .portfolio-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .portfolio-link:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar, .main-content {
+                min-width: 100%;
+            }
         }
     </style>
 </head>
 
-<body class="w3-light-grey">
-
-    <!-- Header Section -->
-    <header class="header">
-        <!-- Header content area with personal information and contact button -->
-        <div class="header-content">
-            <h1>Mahboob ul Hasan</h1> <!-- Main name heading -->
-            <p><i class="fa fa-briefcase fa-fw w3-margin-right"></i>Web Developer & Designer</p> <!-- Job title with icon -->
-            <p><i class="fa fa-home fa-fw w3-margin-right"></i>Pakistan</p> <!-- Location with icon -->
-            <p><i class="fa fa-envelope fa-fw w3-margin-right"></i>ulhasan357@gmail.com</p> <!-- Email with icon -->
-            <p><i class="fa fa-phone fa-fw w3-margin-right"></i>+92 328 830 81 21</p> <!-- Phone number with icon -->
-            <a href="mailto:ulhasan357@gmailcom?subject=Hiring%20Request" class="button">Contact Me</a> <!-- Contact button linking to email -->
-        </div>
-        <!-- Profile image -->
-        <img src="https://i.postimg.cc/N0vWc0Q9/Snapchat-659458679.jpg" alt="Profile Image">
-    </header>
-
-    <!-- Main Content Section -->
-    <div class="main-content">
-
-        <!-- Skills Section -->
-        <div class="section">
-            <h2>Skills</h2> <!-- Section heading -->
-            <div class="card">
-                <!-- Skill progress bars -->
-                <p>HTML</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:94%">94%</div> <!-- HTML progress bar -->
-                </div>
-                <p>CSS</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:83%">83%</div> <!-- CSS progress bar -->
-                </div>
-                <p>JavaScript</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div> <!-- JavaScript progress bar -->
-                </div>
-                <p>Bootstrap</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">80%</div> <!-- Bootstrap progress bar -->
-                </div>
-                <p>PHP</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">70%</div> <!-- PHP progress bar -->
-                </div>
-                <p>SQL</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:65%">65%</div> <!-- SQL progress bar -->
-                </div>
-                <p>WordPress</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%">85%</div> <!-- WordPress progress bar -->
-                </div>
-                <p>Graphic designing</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:60%">60%</div> <!-- Photoshop progress bar -->
-                </div>
-                <p>SEO</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div> <!-- SEO progress bar -->
-                </div>
-                 <p>Microsoft Office</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">70%</div> <!-- PHP progress bar -->
-                </div>
+<body>
+    <div class="container">
+        <!-- Sidebar with personal info -->
+        <div class="sidebar">
+            <img src="https://i.postimg.cc/N0vWc0Q9/Snapchat-659458679.jpg" alt="Mahboob ul Hasan" class="profile-img">
+            
+            <h1 style="text-align: center; margin-bottom: 10px;">Mahboob ul Hasan</h1>
+            <h3 style="text-align: center; color: #3498db; margin-top: 0;">Web Developer & Designer</h3>
+            
+            <div class="contact-info">
+                <h3 class="section-title">Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Pakistan</p>
+                <p><i class="fas fa-envelope"></i> ulhasan357@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +92 328 830 81 21</p>
+            </div>
+            
+            <div class="skills">
+                <h3 class="section-title">Technical Skills</h3>
+                <ul class="skills-list">
+                    <li class="skill-item">
+                        <span class="skill-name">HTML</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 94%;"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">CSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 83%;"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%;"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">Bootstrap</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">PHP</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%;"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">SQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 65%;"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">WordPress</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="languages">
+                <h3 class="section-title">Languages</h3>
+                <ul class="skills-list">
+                    <li class="skill-item">
+                        <span class="skill-name">English</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%;"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">Urdu</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="mailto:ulhasan357@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
-
-
-
-        <div class="section">
-            <h2>Languages That i can speak.</h2> <!-- Section heading -->
-            <div class="card">
-                <!-- Skill progress bars -->
-                <p>English</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">70%</div> <!-- HTML progress bar -->
-                </div>
-                <p>Urdu</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%">85%</div> <!-- HTML progress bar -->
+        
+        <!-- Main content area -->
+        <div class="main-content">
+            <section class="profile">
+                <h2 class="section-title">Professional Profile</h2>
+                <p>Passionate web developer with expertise in front-end and back-end development. Skilled in creating responsive, user-friendly websites using modern technologies. Strong problem-solving abilities and commitment to writing clean, efficient code.</p>
+                
+                <!-- Portfolio Link Section -->
+                <h2 class="section-title">My Portfolio</h2>
+                <p>View my complete portfolio to see examples of my work and projects:</p>
+                <a href="[YOUR PORTFOLIO LINK HERE]" class="portfolio-link" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Visit My Portfolio
+                </a>
+            </section>
+            
+            <section class="experience">
+                <h2 class="section-title">Work Experience</h2>
+                
+                <div class="job">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span class="job-title">Front-end Developer</span>
+                        <span class="date">Jan 2022 - Present <span class="current">Current</span></span>
+                    </div>
+                    <p class="company">Freelance</p>
+                    <ul>
+                        <li>Develop responsive and interactive websites using HTML, CSS, JavaScript, and modern frameworks</li>
+                        <li>Implement UI/UX best practices to create visually appealing and user-friendly web experiences</li>
+                        <li>Collaborate with clients to understand requirements and deliver customized solutions</li>
+                    </ul>
                 </div>
                 
-            </div>
-        </div>
-        <!-- Experience Section -->
-        <div class="section">
-            <h2>Experience</h2> <!-- Section heading -->
-            <div class="card">
-                <!-- Work experience entry -->
-                <h5 class="w3-opacity"><b>Front-end Developer</b></h5> <!-- Job title -->
-                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2022 - <span class="w3-tag w3-teal w3-round">Current</span></h6> <!-- Job duration -->
-                <p>Developing responsive and interactive websites using the latest technologies and frameworks. Passionate about creating visually appealing and user-friendly web experiences.</p> <!-- Job description -->
-            </div>
-            <div class="card">
-                <!-- Work experience entry -->
-                <h5 class="w3-opacity"><b>Back-end Developer</b></h5> <!-- Job title -->
-                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2023 - <span class="w3-tag w3-teal w3-round">Current</span></h6> <!-- Job duration -->
-                <p>Specialized in server-side scripting, database management, and integrating front-end and back-end functionalities to deliver seamless web applications.</p> <!-- Job description -->
-            </div>
-        </div>
-
-        <!-- Education Section -->
-        <div class="section">
-            <h2>Education</h2> <!-- Section heading -->
-            <div class="card">
-                <!-- Education entry -->
-                <h5 class="w3-opacity"><b>Matric</b></h5> <!-- Degree title -->
-                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2020 - 2022</h6> <!-- Duration of study -->
-                <p>
-                    Govt High School Colony Road Mailsi.
-                </p>
+                <div class="job">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span class="job-title">Back-end Developer</span>
+                        <span class="date">Dec 2023 - Present <span class="current">Current</span></span>
+                    </div>
+                    <p class="company">Freelance</p>
+                    <ul>
+                        <li>Develop server-side logic and database architecture for web applications</li>
+                        <li>Integrate front-end components with server-side functionality</li>
+                        <li>Optimize application performance and ensure data security</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="education">
+                <h2 class="section-title">Education</h2>
                 
-                <!-- <p>Completed a comprehensive program covering various aspects of computer science, including programming, algorithms, data structures, and software engineering.</p> Degree description -->
-            </div>
-            <div class="card">
-                <!-- Education entry -->
-                <h5 class="w3-opacity"><b>Intermediate</b></h5> <!-- Degree title -->
-            
-                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2022 - 2024</h6> <!-- Duration of study -->
-                <p>
-                    Govt Graduate Collage Msilsi.
-                </p>
-            </div>
-            <div class="card">
-                <!-- Education entry -->
-                <h5 class="w3-opacity"><b>Computer Course</b></h5> <!-- Degree title -->
-            
-                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2024</h6> <!-- Duration of study -->
-                <p>
-                    Direction Collage Hasilpur. Through(Psdf).
-                </p>
-            </div>
-
+                <div class="education-item">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span class="degree">Intermediate</span>
+                        <span class="date">2022 - 2024</span>
+                    </div>
+                    <p class="institution">Govt Graduate College Mailsi</p>
+                </div>
+                
+                <div class="education-item">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span class="degree">Matric</span>
+                        <span class="date">2020 - 2022</span>
+                    </div>
+                    <p class="institution">Govt High School Colony Road Mailsi</p>
+                </div>
+                
+                <div class="education-item">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span class="degree">Computer Course</span>
+                        <span class="date">2024</span>
+                    </div>
+                    <p class="institution">Direction College Hasilpur (PSDF)</p>
+                </div>
+            </section>
         </div>
-
-        <!-- Projects Section -->
-        <div class="section">
-            <h2>Projects</h2> <!-- Section heading -->
-            <div class="card">
-                <!-- Project entry -->
-                <h5 class="w3-opacity"><b>Project 1:Bosiness boss</b></h5>
-                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2023 - <span class="w3-tag w3-teal w3-round">Ongoing</span></h6> <!-- Project duration -->
-                <!-- <p>Developed an e-commerce platform with features such as product catalog, shopping cart, and payment integration.</p> Project description -->
-                <p>Developed a fully responsive Business Guide website using HTML, CSS, JavaScript, and
-                    Bootstrap gsap
-                    to guide all human being from new and old businessess.
-                    i also added Many businessess about 1100 in this site.</p>
-            </div>
-
-            <div class="card">
-                <!-- Project entry -->
-                <h5 class="w3-opacity"><b>Project 2: E-commerce : Wholeness</b></h5> <!-- Project title -->
-                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2024 - <span class="w3-tag w3-teal w3-round">Ongoing</span></h6> <!-- Project duration -->
-                <p>Created an e-commerce website html css javascript gsap php and MySQL.
-                    it is a shoping website with the login and signup functionality and other things.
-                </p>
-            </div>
-
-            <div class="card">
-                <!-- Project entry -->
-                <h5 class="w3-opacity"><b>Landing pages</b></h5> <!-- Project title -->
-                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2022 - <span class="w3-tag w3-teal w3-round">Ongoing</span></h6> <!-- Project duration -->
-                <p>
-
-                    i had created many kind of Landing pages from 2020 to now.
-                    login pages animated pages contect form pages and many kind of more pages.
-                </p>
-            </div>
-        </div>
-
     </div>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-        <!-- Footer content with social media links -->
-        <p>Find me on social media.</p> <!-- Footer text -->
-        <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-official"></i></a> <!-- Facebook link -->
-        <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a> <!-- Instagram link -->
-        <a href="https://www.snapchat.com" target="_blank"><i class="fa fa-snapchat"></i></a> <!-- Snapchat link -->
-        <a href="https://www.pinterest.com" target="_blank"><i class="fa fa-pinterest-p"></i></a> <!-- Pinterest link -->
-        <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a> <!-- Twitter link -->
-        <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a> <!-- LinkedIn link -->
-        <a href="https://www.github.com" target="_blank"><i class="fa fa-github"></i></a> <!-- GitHub link -->
-        <a href="https://www.stackoverflow.com" target="_blank"><i class="fa fa-stack-overflow"></i></a> <!-- Stack Overflow link -->
-    </footer>
-
 </body>
 
 </html>
